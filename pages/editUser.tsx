@@ -46,7 +46,8 @@ const EditUser: NextPage<Props> = ({ user }) => {
     }
 
     const onTagsChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-        setTags(e.target.value);
+        const tags = e.target.value.split(',')
+        setTags(tags);
     }
 
     const onUserSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
